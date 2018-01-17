@@ -2,8 +2,8 @@
   <% if product.quantity == 0 %>
   <aside class="sold-out">
     <p>Sold Out!</p>
-  <% end %>
   </aside>
+  <% end %>
   <header>
     <%= link_to product do %>
       <%= image_tag product.image.thumb, alt: product.name %>
