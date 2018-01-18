@@ -48,9 +48,11 @@
           <% end %>
         </li>
         <li>
+        <% if current_user %>
           <%= link_to cart_path do %>
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
+        <% end %>
         </li>
       </ul>
     </div>
