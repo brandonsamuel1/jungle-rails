@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h3>Thank you for your order! We appreciate your business</h3>
+  <h4>Please find the details of your order below...</h4>
+  <% @items.each do | item | %>
+   <%= Product.find(item.product_id).name %>
+  <% end %>
+  <p>Total: <%= @cart_total %></p>
+</body>
+</html>
