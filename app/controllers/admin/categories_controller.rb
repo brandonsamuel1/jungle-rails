@@ -1,7 +1,6 @@
 class Admin::CategoriesController < ApplicationController
-  http_basic_authenticate_with name: "Jungle", password: "Book"
-
   before_filter :authenticated
+  http_basic_authenticate_with name: "Jungle", password: "Book"
 
   def index
     @categories = Category.all

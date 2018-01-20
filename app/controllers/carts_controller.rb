@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  before_filter :authenticated
 
   def show
   end
