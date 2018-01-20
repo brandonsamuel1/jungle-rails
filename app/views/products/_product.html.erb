@@ -13,6 +13,12 @@
   <p class="description">
     <%= product.description %>
   </p>
+  <br>
+  <% if !product.reviews.empty? %>
+  <h4>Product Rating: <%= product.reviews.average(:rating).to_f.round(1) %></h4>
+  <% else %>
+  <h5>Be the first to write a review!</h5>
+  <% end %>
   <footer class="actions">
     <% if current_user %>
       <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>

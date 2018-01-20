@@ -1,9 +1,19 @@
-<tr>
-  <td>
-    <%= review.description %>
-  </td>
-  <td>
-    <%= review.rating %>
-  </td>
-
-</tr>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info">
+   <strong>Description: </strong><%= review.description %>
+  </li>
+  <li class="list-group-item list-group-item-info">
+   <strong>Rating:</strong>
+   <div class="review-block-rate">
+    <% for i in 1..review.rating do %>
+      <span class="glyphicon glyphicon-star btn btn-danger btn-xs" aria-hidden="true"></span>
+    <% end %>
+    <% for i in 1..5-review.rating do %>
+      <span class="glyphicon glyphicon-star btn btn-default btn-xs" aria-hidden="true"></span>
+    <% end %>
+  </div>
+  </li>
+  <% if current_user && current_user.id == review.user_id %>
+   <dd><%= link_to "Delete", product_review_path(@product, review), class: "btn btn-danger pull-left", :method => :delete %></dd>
+  <% end %>
+</ul>
