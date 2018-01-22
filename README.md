@@ -26,3 +26,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Screenshots
+
+
+![Screenshot of Jungle app](https://github.com/brandonsamuel1/jungle-rails/blob/master/docs/Screen%20Shot%202018-01-22%20at%2012.38.52%20PM.png?raw=true)
+
+![Screenshot of Jungle signup page](https://github.com/brandonsamuel1/jungle-rails/blob/master/docs/Screen%20Shot%202018-01-22%20at%2012.39.09%20PM.png?raw=true)
